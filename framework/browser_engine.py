@@ -34,7 +34,7 @@ class BrowserEngine(object):
             driver = webdriver.Firefox()
             logger.info("Starting firefox browser.")
         elif browser == "Chrome":
-            driver = webdriver.Chrome(self.chrome_driver_path)
+            driver = webdriver.Chrome()#self.chrome_driver_path
             logger.info("Starting Chrome browser.")
         elif browser == "IE":
             driver = webdriver.Ie(self.ie_driver_path)

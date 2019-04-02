@@ -12,8 +12,8 @@ class HomePage(BasePage):
     search_submit_btn = (By.XPATH,'//*[@id="su"]')
     news_link =(By.XPATH,'//*[@id="u1"]/a[@name="tj_trnews"]')
 
-    def type_search(self, text):
-        self.type(*self.input_box, text)
+    def type_search(self,text):
+        self.type(*self.input_box,text)
 
     def send_submit_btn(self):
         self.click(*self.search_submit_btn)

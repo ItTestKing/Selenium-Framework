@@ -12,11 +12,12 @@ now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
 
 HtmlFile = report_path+now+"HTMLTestReportCN.html"
 
-fp = file(HtmlFile, "wb")
+fp = open(HtmlFile, "wb")
 
 
 if __name__=='__main__':
     suite = unittest.TestLoader().discover("testsuites")
+
     runner = HTMLTestRunner(stream=fp, title=u'测试报告', description=u'执行情况',tester=u'QA')
     runner.run(suite)
-
+    fp.close()

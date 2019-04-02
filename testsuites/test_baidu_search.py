@@ -15,6 +15,7 @@ class BaiduSearch(unittest.TestCase):
         browse = BrowserEngine(cls)
         cls.driver = browse.open_browser(cls)
 
+
     @classmethod
     def tearDownClass(cls):
         """
@@ -29,6 +30,7 @@ class BaiduSearch(unittest.TestCase):
         :return:
         """
         homepage = HomePage(self.driver)
+        time.sleep(2)
         homepage.type_search('selenium')  # 调用页面对象中的方法
         homepage.send_submit_btn()  # 调用页面对象类中的点击搜索按钮方法
         time.sleep(2)
