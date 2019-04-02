@@ -1,7 +1,7 @@
 #_*_ coding:utf-8 _*_
 
 import unittest
-from MyHTMLTestReportCN import HTMLTestRunner
+from MyHTMLTestReportCNs.HTMLTestReportCN import HTMLTestRunner
 import os
 import time
 
@@ -10,7 +10,7 @@ report_path = os.path.dirname(os.path.abspath('.')) + '/test_report/'
 
 now = time.strftime("%Y-%m-%d-%H_%M_%S", time.localtime(time.time()))
 
-HtmlFile = report_path+now+"HTMLtemplate.html"
+HtmlFile = report_path+now+"HTMLTestReportCN.html"
 
 fp = file(HtmlFile, "wb")
 
